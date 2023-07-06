@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trivia Game</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Trivia Game</h1>
+
+    <div id="category-container">
+        <label for="category">Select a Category:</label>
+        <select id="category">
+            <option value="0">Any Category</option>
+            <option value="9">General Knowledge</option>
+            <option value="18">Science</option>
+            <option value="21">Sports</option>
+            <option value="11">Movies</option>
+            <option value="12">Music</option>
+            <option value="15">Video Games</option>
+            <option value="23">History</option>
+            <option value="17">Science & Nature</option>
+            <option value="27">Animals</option>
+            <option value="28">Vehicles</option>
+            <option value="24">Politics</option>
+            <option value="25">Art</option>
+            <option value="26">Celebrities</option>
+            <option value="19">Mathematics</option>
+            <option value="14">Television</option>
+            <option value="31">Anime & Manga</option>
+            <option value="20">Mythology</option>
+            <option value="22">Geography</option>
+            <option value="30">Gadgets</option>
+        </select>
+    </div>
+
+    <div id="difficulty-container">
+        <label for="difficulty">Select a Difficulty:</label>
+        <select id="difficulty">
+            <option value="">Any Difficulty</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
+
+    <button id="start-button" onclick="startGame()">Start Game</button>
+    <button id="resign-button" onclick="resignGame()" style="display: none;">Resign</button>
+
+    <div id="question-container">
+        <!-- Questions will be dynamically added here -->
+    </div>
+
+    <div id="score-container" style="display: none;">
+        <h3>Game Over!</h3>
+        <p id="score-label">Final Score: <span id="score">0</span></p>
+        <h3 id="answers-label" style="display: none;">Answers:</h3>
+        <div id="answers-container"></div>
+    </div>
+
+    <div class="dark-mode-toggle"><i class="fas fa-moon"></i></div>
+    <div class="light-mode-toggle hide"><i class="fas fa-sun"></i></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
